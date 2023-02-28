@@ -1,0 +1,34 @@
+#!python3
+
+import xiezuocat
+
+cookies = {
+    "Hm_lvt_099c1a390e23e6b73b081c48519f6e8e":None,
+    "headimgurl":None,
+    "nickname":None,
+    "traceid":None,
+    "sid":None,
+    "uid":None,
+    "Hm_lpvt_099c1a390e23e6b73b081c48519f6e8e":None,
+    "JSESSIONID":None,
+}
+
+
+if __name__ == "__main__":
+    # Create a chatbot
+    bot = xiezuocat.Chatbot(cookies)
+
+    # Start the chatbot
+    while True:
+        # Get the user's input
+        user_input = input("You: ")
+
+        # If the user types "quit", quit the loop
+        if user_input == "quit":
+            break
+
+        # Get the bot's response
+        bot_response = bot.chat(user_input)
+
+        # Print the bot's response  
+        print("Bot: " + bot_response)
